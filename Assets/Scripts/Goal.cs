@@ -8,7 +8,6 @@ public class Goal : MonoBehaviour{
     static public bool goalMet = false;
 
     void OnTriggerEnter(Collider other) {
-        Debug.Log("Goal hit by" + other.gameObject.tag);
         // When the trigger is hit by something
         // Check to see if it's a Projectile
         if (other.gameObject.tag == "Projectile") {
