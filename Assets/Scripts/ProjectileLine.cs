@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileLine : MonoBehaviour
-{
-    static publicProjectileLine S;  // Singleton
+public class ProjectileLine : MonoBehaviour{
+
+    static public ProjectileLine S;  // Singleton
     [Header("Set in Inspector")]
     public float minDist = 0.1f;
-    privateLineRenderer line;
-    privateGameObject _poi;
+    private LineRenderer line;
+    private GameObject _poi;
     private List<Vector3> points;
     void Awake() {
         S = this; // Set the singleton
