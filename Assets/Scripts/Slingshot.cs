@@ -33,6 +33,7 @@ public class Slingshot : MonoBehaviour {
         launchPoint.SetActive(false);
         launchPos = launchPointTrans.position; // c
     }
+
     void OnMouseDown() { // d
         // The player has pressed the mouse button while over Slingshot
         aimingMode = true;
@@ -44,10 +45,12 @@ public class Slingshot : MonoBehaviour {
         projectileRigidbody = projectile.GetComponent<Rigidbody>(); // a
         projectileRigidbody.isKinematic = true;
     }
+
     void OnMouseEnter() {
         //print("Slingshot:OnMouseEnter()");
         launchPoint.SetActive(true); // b
     }
+
     void OnMouseExit() {
         //print("Slingshot:OnMouseExit()");
         launchPoint.SetActive(false); // b
